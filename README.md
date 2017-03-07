@@ -26,7 +26,7 @@ any configuration, but it’s not suitable for shared clusters.
 to wait its turn. On a shared cluster, it is better to use the Capacity Scheduler or
 the Fair Scheduler. 
 
-Capacity Scheduler
+2.Capacity Scheduler
 
 
 • With the Capacity Scheduler, a separate dedicated queue allows the small job to
@@ -53,7 +53,7 @@ any configuration, but it’s not suitable for shared clusters.
 to wait its turn. On a shared cluster, it is better to use the Capacity Scheduler or
 the Fair Scheduler. 
 
-Fair Scheduler
+2.Fair Scheduler
 
 • With the Fair Scheduler, there is no need to reserve a set amount of capacity,
 since it will dynamically balance resources between all running jobs.
@@ -68,7 +68,7 @@ goes back to using the full cluster capacity again.
 
 Q3. Explain the difference between Capacity and Fair scheduler
 
-Capacity Scheduler
+1.Capacity Scheduler
 
 
 • With the Capacity Scheduler, a separate dedicated queue allows the small job to
@@ -79,7 +79,7 @@ reserved for jobs in that queue.
 while some may be underutilised.
 • Large job finishes late when compared with using the FIFO Scheduler.
 
-Fair Scheduler
+2.Fair Scheduler
 
 • With the Fair Scheduler, there is no need to reserve a set amount of capacity,
 since it will dynamically balance resources between all running jobs.
@@ -97,43 +97,54 @@ Hadoop 1.x has many limitations or drawbacks. Main drawback of Hadoop 1.x is tha
 
 Hadoop 1.x has the following Limitations/Drawbacks:
 
-It is only suitable for Batch Processing of Huge amount of Data, which is already in Hadoop System.
+1.It is only suitable for Batch Processing of Huge amount of Data, which is already in Hadoop System.
 
-It is not suitable for Real-time Data Processing.
+2.It is not suitable for Real-time Data Processing.
 
-It is not suitable for Data Streaming.
+3.It is not suitable for Data Streaming.
 
-It supports upto 4000 Nodes per Cluster.
+4.It supports upto 4000 Nodes per Cluster.
 
-It has a single component : JobTracker to perform many activities like Resource Management, Job Scheduling, Job Monitoring, Re-scheduling Jobs etc.
+5.It has a single component : JobTracker to perform many activities like Resource Management, Job Scheduling, Job Monitoring, Re-scheduling Jobs etc.
 
-JobTracker is the single point of failure.
+6.JobTracker is the single point of failure.
 
-It does not support Multi-tenancy Support.
+7.It does not support Multi-tenancy Support.
 
-It supports only one Name Node and One Namespace per Cluster.
+8.It supports only one Name Node and One Namespace per Cluster.
 
-It does not support Horizontal Scalability.
+9.It does not support Horizontal Scalability.
 
-It runs only Map/Reduce jobs.
+10.It runs only Map/Reduce jobs.
 
-It follows Slots concept in HDFS to allocate Resources (Memory, RAM, CPU). It has static Map and Reduce Slots. That means once it assigns resources to Map/Reduce jobs, it cannot re-use them even though some slots are idle.
+11.It follows Slots concept in HDFS to allocate Resources (Memory, RAM, CPU). It has static Map and Reduce Slots. That means once it assigns resources to Map/Reduce jobs, it cannot re-use them even though some slots are idle.
+
 
 Hadoop 2.x solves Hadoop 1.x Limitations
 
+
 Hadoop 2.x has resolved most of the Hadoop 1.x limitations by using new architecture.
 
-By decoupling MapReduce component responsibilities into different components.
-By Introducing new YARN component for Resource management.
-By decoupling component’s responsibilities, it supports multiple namespace, Multi-tenancy, Higher Availability and Higher Scalability.
+1.By decoupling MapReduce component responsibilities into different components.
+
+2.By Introducing new YARN component for Resource management.
+
+3.By decoupling component’s responsibilities, it supports multiple namespace, Multi-tenancy, Higher Availability and Higher Scalability.
 Hadoop 2.x YARN Benefits
+
 
 Hadoop 2.x YARN has the following benefits.
 
-Highly Scalability
-Highly Availability
-Supports Multiple Programming Models
-Supports Multi-Tenancy
-Supports Multiple Namespaces
-Improved Cluster Utilization
-Supports Horizontal Scalability
+1.Highly Scalability
+
+2.Highly Availability
+
+3.Supports Multiple Programming Models
+
+4.Supports Multi-Tenancy
+
+5.Supports Multiple Namespaces
+
+6.Improved Cluster Utilization
+
+7.Supports Horizontal Scalability
